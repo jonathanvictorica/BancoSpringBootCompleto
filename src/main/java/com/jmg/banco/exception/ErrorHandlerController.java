@@ -1,4 +1,4 @@
-package com.jmg.banco.controller;
+package com.jmg.banco.exception;
 
 import java.io.IOException;
 
@@ -10,9 +10,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-
-import com.jmg.banco.exception.ErrorInfo;
-import com.jmg.banco.exception.ServicioException;
 
 @ControllerAdvice
 public class ErrorHandlerController {

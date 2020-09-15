@@ -12,21 +12,18 @@ import java.util.Date;
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.http.HttpStatus;
-import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.jmg.banco.controller.ClienteController;
+import com.jmg.banco.controller.impl.ClienteControllerImpl;
 import com.jmg.banco.domain.Cliente;
 import com.jmg.banco.domain.CuentaBancaria;
 
-@WebMvcTest(controllers = ClienteController.class)
+@WebMvcTest(controllers = ClienteControllerImpl.class)
 @Transactional
 public class CuentaBancariaControllerTest extends TestGeneric {
 

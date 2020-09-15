@@ -1,4 +1,4 @@
-package com.jmg.banco.repository.impl;
+package com.jmg.banco.repository.adapter;
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -10,8 +10,8 @@ import org.springframework.stereotype.Component;
 
 import com.jmg.banco.domain.CuentaBancaria;
 import com.jmg.banco.domain.EstadoCuenta;
-import com.jmg.banco.repository.CuentaBancariaRepositoryPort;
 import com.jmg.banco.repository.hibernate.CuentaBancariaHibernateRepository;
+import com.jmg.banco.repository.port.CuentaBancariaRepositoryPort;
 
 @Component
 public class CuentaBancariaRepositoryAdapter implements CuentaBancariaRepositoryPort {

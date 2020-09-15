@@ -1,4 +1,4 @@
-package com.jmg.banco.repository;
+package com.jmg.banco.repository.port;
 
 import java.math.BigDecimal;
 import java.util.Date;

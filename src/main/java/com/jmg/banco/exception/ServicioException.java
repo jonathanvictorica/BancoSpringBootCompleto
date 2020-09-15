@@ -3,7 +3,6 @@ package com.jmg.banco.exception;
 import javax.persistence.Access;
 import javax.persistence.AccessType;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 

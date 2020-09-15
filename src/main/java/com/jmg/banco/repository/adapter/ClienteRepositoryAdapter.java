@@ -1,4 +1,4 @@
-package com.jmg.banco.repository.impl;
+package com.jmg.banco.repository.adapter;
 
 import java.util.List;
 import java.util.Optional;
@@ -9,8 +9,8 @@ import org.springframework.stereotype.Component;
 import com.jmg.banco.domain.Cliente;
 import com.jmg.banco.exception.NoExisteException;
 import com.jmg.banco.exception.ServicioException;
-import com.jmg.banco.repository.ClienteRepositoryPort;
 import com.jmg.banco.repository.hibernate.ClienteHibernateRepository;
+import com.jmg.banco.repository.port.ClienteRepositoryPort;
 
 @Component
 public class ClienteRepositoryAdapter implements ClienteRepositoryPort {

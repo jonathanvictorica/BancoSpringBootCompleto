@@ -12,7 +12,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Index;
 import javax.persistence.Table;
-import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "BC0001_Cliente", indexes = { @Index(name = "IDX_cliente_tipodocumento_nrodocumento", columnList = "tipo_documento,nro_documento", unique = true) })
@@ -27,22 +26,19 @@ public class Cliente implements Serializable {
 	private Long id;
 
 	@Column(name = "tipo_documento", length = 5, nullable = false)
-	@Size(min = 2, max = 5, groups = { Cliente.AddValidations.class,Cliente.UpdateValidations.class })
 	private String tipoDocumento;
 
 	@Column(name = "nro_documento", columnDefinition = "bigint", nullable = false)
 	private Long nroDocumento;
 
 	@Column(name = "nombre", length = 50, nullable = false)
-	@Size(min = 2, max = 50, groups = { Cliente.AddValidations.class,Cliente.UpdateValidations.class })
 	private String nombre;
 
 	@Column(name = "apellido", length = 30, nullable = false)
-	@Size(min = 2, max = 30, groups = { Cliente.AddValidations.class,Cliente.UpdateValidations.class })
 	private String apellido;
 
 	@Column(name = "fecha_alta", columnDefinition = "datetime", nullable = false)
-	private Date fechaAlta;
+	private Date fechaAlta = new Date();
 
 	public Cliente() {
 

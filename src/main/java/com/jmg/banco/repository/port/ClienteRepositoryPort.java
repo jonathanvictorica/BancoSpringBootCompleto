@@ -1,4 +1,4 @@
-package com.jmg.banco.repository;
+package com.jmg.banco.repository.port;
 
 import java.util.List;
 import java.util.Optional;

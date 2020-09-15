@@ -2,7 +2,6 @@ package com.jmg.banco.service;
 
 import java.math.BigDecimal;
 import java.util.List;
-import java.util.Optional;
 
 import com.jmg.banco.domain.CuentaBancaria;
 import com.jmg.banco.exception.ServicioException;

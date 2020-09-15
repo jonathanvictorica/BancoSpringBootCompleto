@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 import com.jmg.banco.domain.Cliente;
 import com.jmg.banco.exception.ServicioException;
-import com.jmg.banco.repository.ClienteRepositoryPort;
+import com.jmg.banco.repository.port.ClienteRepositoryPort;
 import com.jmg.banco.service.AdmClienteUseCase;
 import com.jmg.banco.service.ConsultarClienteUseCase;
 

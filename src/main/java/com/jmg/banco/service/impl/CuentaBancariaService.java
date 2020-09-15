@@ -7,7 +7,6 @@ import java.util.Optional;
 
 import javax.transaction.Transactional;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.jmg.banco.domain.Cliente;
@@ -19,23 +18,25 @@ import com.jmg.banco.exception.CuentaBancariaNoExisteException;
 import com.jmg.banco.exception.CuentaBancariaSinSaldoDisponibleException;
 import com.jmg.banco.exception.CuentaBancariaSobreGiradaException;
 import com.jmg.banco.exception.ServicioException;
-import com.jmg.banco.repository.ClienteRepositoryPort;
-import com.jmg.banco.repository.CuentaBancariaRepositoryPort;
+import com.jmg.banco.repository.port.ClienteRepositoryPort;
+import com.jmg.banco.repository.port.CuentaBancariaRepositoryPort;
 import com.jmg.banco.service.AccionesCuentaBancariaUseCase;
 import com.jmg.banco.service.AdmCuentaBancariaUseCase;
 import com.jmg.banco.service.ConsultarCuentaBancariaUseCase;
+import com.jmg.banco.ws.port.ConsultaDeudaOtroBancoPort;
 
 @Component
 public class CuentaBancariaService implements AdmCuentaBancariaUseCase, AccionesCuentaBancariaUseCase, ConsultarCuentaBancariaUseCase {
 
 	private ClienteRepositoryPort clienteRepositoryPort;
 	private CuentaBancariaRepositoryPort cuentaBancariaRepositoryPort;
+	private ConsultaDeudaOtroBancoPort consultaDeudaOtroBancoPort;
 
-	@Autowired
-	public CuentaBancariaService(ClienteRepositoryPort clienteRepositoryPort, CuentaBancariaRepositoryPort cuentaBancariaRepositoryPort) {
+	public CuentaBancariaService(ClienteRepositoryPort clienteRepositoryPort, CuentaBancariaRepositoryPort cuentaBancariaRepositoryPort, ConsultaDeudaOtroBancoPort consultaDeudaOtroBancoPort) {
 		super();
 		this.clienteRepositoryPort = clienteRepositoryPort;
 		this.cuentaBancariaRepositoryPort = cuentaBancariaRepositoryPort;
+		this.consultaDeudaOtroBancoPort = consultaDeudaOtroBancoPort;
 	}
 
 	@Override
@@ -97,6 +98,8 @@ public class CuentaBancariaService implements AdmCuentaBancariaUseCase, Acciones
 			throw new ClienteNoExiste(cuenta.getCliente().getId());
 		}
 
+		cuenta.setFechaActualizacionSaldo(new Date());
+		cuenta.setFechaHoraApertura(new Date());
 		cuenta.setEstadoCuenta(EstadoCuenta.Activa.name());
 		cuenta.setCliente(cliente.get());
 		cuentaBancariaRepositoryPort.crearCuentaBancaria(cuenta);
