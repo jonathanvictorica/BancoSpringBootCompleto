@@ -21,6 +21,7 @@ public class ClienteRepositoryAdapter implements ClienteRepositoryPort {
 	public ClienteRepositoryAdapter(ClienteHibernateRepository clienteRepository) {
 		super();
 		this.clienteRepository = clienteRepository;
+
 	}
 
 	@Override
