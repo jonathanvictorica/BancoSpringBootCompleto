@@ -1,16 +1,16 @@
 package com.jmg.banco.service;
 
+import com.jmg.banco.domain.Cliente;
+
 import java.util.List;
 import java.util.Optional;
 
-import com.jmg.banco.domain.Cliente;
-
 public interface ConsultarClienteUseCase {
 
-	Optional<Cliente> buscarClientePorId(Long id);
+    Optional<Cliente> buscarClientePorId(Long id);
 
-	List<Cliente> buscarTodosClientes();
+    List<Cliente> buscarTodosClientes();
 
-	Optional<Cliente> buscarClientePorDocumento(Long nroDocumento);
+    Optional<Cliente> buscarClientePorDocumento(Long nroDocumento);
 
 }

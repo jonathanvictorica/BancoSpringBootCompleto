@@ -4,87 +4,86 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 public class CuentaBancariaResponseDTO {
-	
-	private Long id;
-	
-	private Long idCliente;
-	
-	private String tipoDocumento;
-	
-	private String numeroDocumento;
 
-	private Date fechaActualizacionSaldo;
+    private Long id;
 
-	private BigDecimal saldoCuenta;
+    private Long idCliente;
 
-	private String alias;
+    private String tipoDocumento;
 
-	private String estadoCuenta;
+    private String numeroDocumento;
 
-	public Long getId() {
-		return id;
-	}
+    private Date fechaActualizacionSaldo;
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+    private BigDecimal saldoCuenta;
 
-	public Long getIdCliente() {
-		return idCliente;
-	}
+    private String alias;
 
-	public void setIdCliente(Long idCliente) {
-		this.idCliente = idCliente;
-	}
+    private String estadoCuenta;
 
-	public String getTipoDocumento() {
-		return tipoDocumento;
-	}
+    public Long getId() {
+        return id;
+    }
 
-	public void setTipoDocumento(String tipoDocumento) {
-		this.tipoDocumento = tipoDocumento;
-	}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-	public String getNumeroDocumento() {
-		return numeroDocumento;
-	}
+    public Long getIdCliente() {
+        return idCliente;
+    }
 
-	public void setNumeroDocumento(String numeroDocumento) {
-		this.numeroDocumento = numeroDocumento;
-	}
+    public void setIdCliente(Long idCliente) {
+        this.idCliente = idCliente;
+    }
 
-	public Date getFechaActualizacionSaldo() {
-		return fechaActualizacionSaldo;
-	}
+    public String getTipoDocumento() {
+        return tipoDocumento;
+    }
 
-	public void setFechaActualizacionSaldo(Date fechaActualizacionSaldo) {
-		this.fechaActualizacionSaldo = fechaActualizacionSaldo;
-	}
+    public void setTipoDocumento(String tipoDocumento) {
+        this.tipoDocumento = tipoDocumento;
+    }
 
-	public BigDecimal getSaldoCuenta() {
-		return saldoCuenta;
-	}
+    public String getNumeroDocumento() {
+        return numeroDocumento;
+    }
 
-	public void setSaldoCuenta(BigDecimal saldoCuenta) {
-		this.saldoCuenta = saldoCuenta;
-	}
+    public void setNumeroDocumento(String numeroDocumento) {
+        this.numeroDocumento = numeroDocumento;
+    }
 
-	public String getAlias() {
-		return alias;
-	}
+    public Date getFechaActualizacionSaldo() {
+        return fechaActualizacionSaldo;
+    }
 
-	public void setAlias(String alias) {
-		this.alias = alias;
-	}
+    public void setFechaActualizacionSaldo(Date fechaActualizacionSaldo) {
+        this.fechaActualizacionSaldo = fechaActualizacionSaldo;
+    }
 
-	public String getEstadoCuenta() {
-		return estadoCuenta;
-	}
+    public BigDecimal getSaldoCuenta() {
+        return saldoCuenta;
+    }
 
-	public void setEstadoCuenta(String estadoCuenta) {
-		this.estadoCuenta = estadoCuenta;
-	}
-	
-	
+    public void setSaldoCuenta(BigDecimal saldoCuenta) {
+        this.saldoCuenta = saldoCuenta;
+    }
+
+    public String getAlias() {
+        return alias;
+    }
+
+    public void setAlias(String alias) {
+        this.alias = alias;
+    }
+
+    public String getEstadoCuenta() {
+        return estadoCuenta;
+    }
+
+    public void setEstadoCuenta(String estadoCuenta) {
+        this.estadoCuenta = estadoCuenta;
+    }
+
 
 }

@@ -5,9 +5,9 @@ import com.jmg.banco.exception.ServicioException;
 
 public interface AdmClienteUseCase {
 
-	public void crearCliente(Cliente cliente);
+    public void crearCliente(Cliente cliente);
 
-	public void modificarCliente(Cliente cliente) throws ServicioException;
+    public void modificarCliente(Cliente cliente) throws ServicioException;
 
-	public void eliminarCliente(Long id);
+    public void eliminarCliente(Long id);
 }
