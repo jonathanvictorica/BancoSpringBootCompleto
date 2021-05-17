@@ -4,5 +4,5 @@ import com.jmg.banco.ws.dto.DeudaClienteResponseDTO;
 
 public interface ConsultaDeudaOtroBancoPort {
 
-	public DeudaClienteResponseDTO obtenerDeudaCliente(String tipo, String documento);
+    public DeudaClienteResponseDTO obtenerDeudaCliente(String tipo, String documento);
 }
